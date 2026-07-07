@@ -346,6 +346,7 @@ section {
     max-width: 800px;
     text-align: center;
     overflow: hidden;
+    cursor: pointer;
 }
 .definition-image-wrapper img {
     border-radius: var(--border-radius);
@@ -398,6 +399,7 @@ section {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    cursor: pointer;
 }
 .types-card-body {
     padding: 25px;
@@ -542,6 +544,7 @@ section {
     max-width: 800px;
     text-align: center;
     overflow: hidden;
+    cursor: pointer;
 }
 .fame-image-wrapper img {
     border-radius: var(--border-radius);
