@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="اكتشف أصالة وتاريخ الحلوى العمانية، رمز الكرم والضيافة في سلطنة عمان. تعرف على أنواعها، فوائدها، وطريقة صناعتها التقليدية.">
     <title data-i18n="page_title">الحلوى العمانية | أصالة الكرم العماني</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -13,8 +12,9 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
+<!-- ===== (navbar) ===== -->
+
 <body>
-    <!-- شريط التنقل -->
     <header>
         <nav class="nav-container">
             <h1 class="nav-logo" data-i18n="nav_logo">الحلوى العُمانية</h1>
@@ -48,6 +48,17 @@
         </nav>
     </header>
 
+    <!-- ===== نافذة عرض الصور (Lightbox) ===== -->
+    <div id="image-overlay" class="overlay">
+        <span class="close-btn" id="close-overlay">&times;</span>
+        <div class="overlay-content-wrapper">
+            <img src="" alt="صورة مكبرة" class="overlay-content" id="enlarged-img">
+            
+            <h3 id="overlay-title" class="overlay-title"></h3>
+            <p id="overlay-desc" class="overlay-desc"></p>
+        </div>
+    </div>
+
     <!-- القسم الرئيسي -->
     <section id="hero" class="hero" style="background-image: url('images/about.jpg');" >
         <div class="hero-content">
@@ -57,7 +68,7 @@
     </section>
 
     <main>
-        <!-- 1. التعريف -->
+        <!-- 1. قسم التعريف (definition Section)-->
         <section id="definition" class="definition-section">
             <h2 class="definition-title" data-i18n="def_title">ما هي الحلوى العمانية؟</h2>
                 <p class="definition-desc">
@@ -68,7 +79,7 @@
                     تتميز بقوامها المتماسك واللزج ونكهاتها الغنية بالمواد الطبيعية الفريدة. تُقدّم عادةً في المناسبات السعيدة والأعياد والزيارات اليومية، وتصحبها دائماً القهوة العُمانية المُرّة لتصنع توازناً مثالياً في المذاق يعكس دفء البيوت العُمانية.
                 </p>
                 <div class="definition-image-wrapper">
-                    <img src="images/about.jpg" alt="الحلوى العمانية التقليدية" class="responsive-img">
+                    <img src="images/about.jpg" alt="الحلوى العمانية التقليدية" class="definition-image">
                 </div>
             </div>
         </section>
@@ -79,19 +90,16 @@
             <p class="types-desc" data-i18n="types_desc">تتعدد أنواع الحلوى العمانية بحسب المكونات المضافة ونسب الزعفران والسكر المستخدم فيها.</p>
             <div class="container">
                 <div class="grid-layout">
-                    <div class="card">
-                        <img src="images/black.jpg" alt="الحلوى السوداء العمانية">
-                        <div class="card-body">
-                            <h3 data-i18n="type1_title">الحلوى السوداء</h3>
-                            <p data-i18n="type1_desc">تُصنع باستخدام السكر البني (الأحمر التقليدي) غير المكرر، مما يمنحها لونها الداكن المميز ونكهتها القوية والعميقة التي يعشقها الكثيرون.</p>
-                        </div>
+                    <div class="types-card">
+                        <img src="images/black.jpg" alt="الحلوى السوداء العمانية" class="types-card-img">
+                            <h3 class="types-card-title" data-i18n="type1_title"> الحلوى السوداء</h3>
+                            <p class="types-card-desc" data-i18n="type1_desc">تُصنع باستخدام السكر البني (الأحمر التقليدي) غير المكرر، مما يمنحها لونها الداكن المميز ونكهتها القوية والعميقة التي يعشقها الكثيرون.</p>
+
                     </div>
-                    <div class="card">
-                        <img src="images/Yellow.jpg" alt="الحلوى الصفراء العمانية">
-                        <div class="card-body">
-                            <h3 data-i18n="type2_title">الحلوى الصفراء</h3>
-                            <p data-i18n="type2_desc">تعتمد في صناعتها على السكر الأبيض النقي مع إضافة لمسات متوازنة من الزعفران وماء الورد، وتأتي بقوام ناعم ومذاق معتدل الحلاوة يناسب جميع الأذواق.</p>
-                        </div>
+                    <div class="types-card">
+                        <img src="images/Yellow.jpg" alt="الحلوى الصفراء العمانية" class="types-card-img">
+                            <h3 class="types-card-title" data-i18n="type2_title">الحلوى الصفراء</h3>
+                            <p class="types-card-desc" data-i18n="type2_desc">تعتمد في صناعتها على السكر الأبيض النقي مع إضافة لمسات متوازنة من الزعفران وماء الورد، وتأتي بقوام ناعم ومذاق معتدل الحلاوة يناسب جميع الأذواق.</p>
                     </div>
                 </div>
             </div>
@@ -103,7 +111,7 @@
             <p class="making-desc" data-i18n="making_desc">صناعة الحلوى فن عريق يتطلب مهارة فائقة وصبرًا طويلاً للحصول على القوام والمذاق المثالي.</p>
             <div class="container">
                 <div class="ingredients-container">
-                    <h3 data-i18n="ingredients_title">المكونات الأساسية</h3>
+                    <h3 data-i18n="ingredients-title">المكونات الأساسية</h3>
                     <div class="ingredients-grid">
                         <div class="ingredient-item"><span>💧</span> <span data-i18n="ing_1">الماء النقي</span></div>
                         <div class="ingredient-item"><span>🍚</span> <span data-i18n="ing_2">النشاء النقي</span></div>
@@ -176,7 +184,7 @@
                     </div>
                 </div>
                 <div class="fame-image-wrapper fame-image">
-                    <img src="images/fame.jpg" alt="الضيافة العمانية والقهوة" class="responsive-img">
+                    <img src="images/fame.jpg" alt="الضيافة العمانية والقهوة" class="fame-image">
                 </div>
             </div>
         </section>
@@ -238,7 +246,8 @@
     </footer>
 
     <!-- استدعاء ملفات الترجمة والجافاسكربت -->
-    <script src="JS/translations.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>

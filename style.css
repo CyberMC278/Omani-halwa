@@ -1,9 +1,6 @@
-/* ==================================================
-   1. المتغيرات والسمات الأساسية (الحلوى العمانية)
-================================================== */
 :root {
     --bg-color: #faf8f5;
-    --text-color: #4f2202c6;
+    --text-color: #2D1606;
     --primary-color: #8c531d;
     --secondary-color: #5e350f;
     --accent-color: #d4af37;
@@ -28,7 +25,7 @@ body.dark-mode {
 }
 
 /* ==================================================
-   2. إعادة التعيين والتنسيق العام
+   1. إعادة التعيين والتنسيق العام
 ================================================== */
 * {
     margin: 0;
@@ -51,161 +48,7 @@ body {
 }
 
 /* ==================================================
-   3. الحاويات و القوالب والتخطيط
-================================================== */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-.grid-layout {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 20px;
-}
-.card {
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    width: calc(50% - 10px); 
-    padding: 30px;
-    text-align: center;
-    box-sizing: border-box;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(74, 44, 17, 0.1);
-}
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-.card:hover img {
-    transform: scale(1.03);
-}
-.card-body {
-    padding: 25px;
-    text-align: center;
-}
-.card-body h3 {
-    color: var(--primary-color);
-    margin-bottom: 12px;
-    font-size: 1.3rem;
-}
-.card-body p {
-    font-size: 0.95rem;
-    color: var(--text-color);
-    opacity: 0.85;
-}
-.ingredients-container {
-    background-color: var(--card-bg);
-    padding: 35px;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-    margin-bottom: 40px;
-    text-align: center;
-}
-.ingredients-container h3 {
-    margin-bottom: 25px;
-    color: var(--primary-color);
-    font-size: 1.4rem;
-}
-.ingredients-grid {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-.ingredient-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    background-color: var(--bg-color);
-    padding: 8px 18px;
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-.ingredient-item:hover {
-    transform: scale(1.05);
-    border-color: var(--primary-color);
-}
-.steps-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-.step-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: var(--card-bg);
-    padding: 24px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-}
-.step-item:hover {
-    transform: translateX(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-.step-num {
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-    min-width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(140, 83, 29, 0.2);
-}
-.step-content {
-    flex: 1;
-}
-.step-content strong {
-    font-size: 1.15rem;
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: 5px;
-}
-.step-content p {
-    font-size: 0.95rem;
-    opacity: 0.85;
-}
-.responsive-img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    margin-top: 30px;
-}
-
-/* ==================================================
-   4. شريط التنقل (Navbar)
+   2. شريط التنقل (Navbar)
 ================================================== */
 header {
     position: fixed;
@@ -317,14 +160,125 @@ body.dark-mode .sun-icon { display: block; }
 body.dark-mode .moon-icon { display: none; }
 
 /* ==================================================
-   5. الأقسام والعناوين
+   3. الحاويات و القوالب المشتركة لجميع الأقسام
 ================================================== */
 section {
     padding: 60px 20px 40px;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px); 
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(74, 44, 17, 0.1);
+}
+.card-body h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+.card-body p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.85;
+}
+
 /* ==================================================
-   6. قسم الهيرو (Hero Section)
+   4. نافذة عرض الصور(Lightbox)
+================================================== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.overlay.active {
+    display: flex; 
+}
+.overlay-content-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    max-width: 85%;
+    animation: zoomIn 0.3s ease;
+}
+.overlay-content {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.overlay-title {
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.overlay-desc {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2001;
+}
+.close-btn:hover {
+    color: var(--primary-color);
+}
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==================================================
+   5. قسم الهيرو (Hero Section)
 ================================================== */
 .hero {
     position: relative;
@@ -354,7 +308,7 @@ section {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-.hero h1 {
+.hero title {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 20px;
@@ -362,30 +316,21 @@ section {
     color: var(--primary-color);
 }
 
-.hero p {
+.hero desc {
     font-size: 1.3rem;
     margin-bottom: 30px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* ==================================================
-   7. قسم التعريف (definition Section)
+   6. قسم التعريف (definition Section)
 ================================================== */
 .definition-title {
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2rem;
     margin-bottom: 50px;
-    position: relative;
     font-weight: 700;
-}
-.definition-title::after {
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
 }
 .definition-desc {
     max-width: 780px;
@@ -400,32 +345,28 @@ section {
     margin: 0px auto;
     max-width: 800px;
     text-align: center;
+    overflow: hidden;
 }
 .definition-image-wrapper img {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     max-width: 100%;
     height: auto;
+    transition: var(--transition);
+}
+.definition-image-wrapper img:hover {
+    transform: scale(1.03);
 }
 
 /* ==================================================
-   8. قسم الأنواع (types Section)
+   7. قسم الأنواع (types Section)
 ================================================== */
 .types-title {
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2rem;
     margin-bottom: 50px;
-    position: relative;
     font-weight: 700;
-}
-.types-title::after {
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
 }
 .types-desc {
     max-width: 800px;
@@ -435,25 +376,52 @@ section {
     color: var(--text-color);
     opacity: 0.85;
 }
-
+.types-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px); 
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.types-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(74, 44, 17, 0.1);
+}
+.types-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.types-card-body {
+    padding: 25px;
+    text-align: center;
+}
+.types-card-title {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+.types-card-desc {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.85;
+}
 /* ==================================================
-   9. قسم طريقة الصنع (making Section)
+   8. قسم طريقة الصنع (making Section)
 ================================================== */
 .making-title {
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2rem;
     margin-bottom: 50px;
-    position: relative;
     font-weight: 700;
-}
-.making-title::after {
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
 }
 .making-desc {
     max-width: 800px;
@@ -463,25 +431,102 @@ section {
     color: var(--text-color);
     opacity: 0.85;
 }
+.ingredients-container {
+    background-color: var(--card-bg);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+    text-align: center;
+}
+.ingredients-container-title {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+.ingredients-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: var(--bg-color);
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.ingredient-item:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+}
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+.step-item:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.step-num {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(140, 83, 29, 0.2);
+}
+.step-content {
+    flex: 1;
+}
+.step-content strong {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+.step-content p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
 
 /* ==================================================
-   10. قسم سر الشهرة (fame Section)
+   9. قسم سر الشهرة (fame Section)
 ================================================== */
 .fame-title {
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2rem;
     margin-bottom: 50px;
-    position: relative;
     font-weight: 700;
-}
-.fame-title::after {
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
 }
 .fame-desc {
     max-width: 800px;
@@ -496,32 +541,28 @@ section {
     margin: 0px auto;
     max-width: 800px;
     text-align: center;
+    overflow: hidden;
 }
 .fame-image-wrapper img {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     max-width: 100%;
     height: auto;
+    transition: var(--transition);
+}
+.fame-image-wrapper img:hover {
+    transform: scale(1.03);
 }
 
 /* ==================================================
-   11. قسم الفوائد (benefits Section)
+   10. قسم الفوائد (benefits Section)
 ================================================== */
 .benefits-title {
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2rem;
     margin-bottom: 50px;
-    position: relative;
     font-weight: 700;
-}
-.benefits-title::after {
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin: 15px auto 0;
-    border-radius: 2px;
 }
 .benefits-desc {
     max-width: 800px;
@@ -533,7 +574,7 @@ section {
 }
 
 /* ==================================================
-   12. التذييل (Footer)
+   11. التذييل (Footer)
 ================================================== */
 footer {
     background-color: var(--card-bg);
@@ -592,19 +633,17 @@ footer {
 }
 
 /* ==================================================
-   13. التوافق مع الشاشات (Media Queries)
+   12. التوافق مع الشاشات (Media Queries)
 ================================================== */
 @media (max-width: 768px) {
     nav {
         padding: 10px 15px;
         gap: 10px;
         flex-wrap: wrap;
-    }
-    
+    } 
     nav h1 {
         font-size: 1.2rem;
     }
-    
     nav ul {
         display: flex;
         flex-wrap: wrap;
@@ -616,49 +655,44 @@ footer {
         border-top: 1px solid var(--border-color);
         padding-top: 8px;
     }
-    
     nav ul li a {
         font-size: 0.85rem;
         padding: 4px 6px;
     }
-    
     .hero {
         height: 60vh;
-    }
-    
-    .hero h1 {
+    }  
+    .hero title {
         font-size: 2.5rem;
     }
-    
-    .hero p {
+    .hero desc {
         font-size: 1.1rem;
     }
-    
+    .card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+    .types-card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
     .step-item {
         flex-direction: column;
         text-align: center;
         padding: 20px;
     }
-    
     .step-item:hover {
         transform: none;
     }
-    
     html {
         scroll-padding-top: 120px;
     }
-    
     section {
         padding: 130px 15px 40px;
     }
-    
     h2 {
         font-size: 1.8rem;
         margin-bottom: 30px;
-    }
-    
-    .responsive-img {
-        height: 250px;
     }
 }
 
